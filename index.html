@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        #wrapper { background-color:bisque;
+                    width: 70%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 2em;}
+        </style>
+    </head>
+<body>
+<script>
+  
+
+function buildMadLib() {
+ // alert("Doing Madlib now");
+  var madText = "Today, every student has a computer small enough to fit into his ";
+  var madText2 = "They can solve any math problem by simply pushing the computer's little ";
+  var madText3 = "Computers can add, multiply, divide, and ";
+  var madText4 = "They can also ";
+  var madText5 = "Some have a big screen that shows all kinds of ";
+ 
+
+  noun1 = document.getElementById("noun1").value.toLowerCase();
+  madText = madText + noun1 + "."; 
+
+  pluralNoun = document.getElementById("pluralNoun").value.toLowerCase();
+  madText2 = madText2 + pluralNoun + ".";
+
+  verb1 = document.getElementById("verb1").value.toLowerCase();
+  madText3 = madText3 + verb1 + ".";
+
+  verb2 = document.getElementById("verb2").value.toLowerCase();
+  madText4 = madText4 + verb2 + ".";
+
+  noun2 = document.getElementById("noun2").value.toLowerCase();
+  madText5 = madText5 + noun2 + ".";
+
+
+  document.getElementById("Madlib").innerHTML = madText;
+  document.getElementById("Madlib2").innerHTML = madText2;
+  document.getElementById("Madlib3").innerHTML = madText3;
+  document.getElementById("Madlib4").innerHTML = madText4;
+  document.getElementById("Madlib5").innerHTML = madText5;
+  document.getElementById('HiddenButton').innerHTML = 
+  '<input type="button" onclick="window.location.reload();" value="Go Again" />';
+
+}
+
+</script>
+
+<div id = "wrapper">
+
+<img src = "https://www.madlibs.com/wp-content/themes/madlibs/assets/images/mdl_logo.png" width="20%" height="auto" alt="mad libs logo">
+<p>Please enter the following information:</p>
+
+<input id="pluralNoun" placeholder="a plural noun"><br>
+<input id="noun1" placeholder="a noun"><br>
+<input id="noun2" placeholder="another noun"><br>
+<input id="verb1" placeholder="verb"><br>
+<input id="verb2" placeholder="another verb"><br>
+
+
+<button type="button" onclick="buildMadLib()">Submit</button>
+<p> </p>
+
+<div id = "Madlib" name="Madlib"></div>
+<div id = "Madlib2" name="Madlib2"></div>
+<div id = "Madlib3" name="Madlib3"></div>
+<div id = "Madlib4" name="Madlib4"></div>
+<div id = "Madlib5" name="Madlib5"></div>
+<div id="HiddenButton">
+
+
+</div>
+
+</div>
+
+</body>
+</html> 
+
